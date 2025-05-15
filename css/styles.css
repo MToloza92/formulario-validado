@@ -1,0 +1,123 @@
+:root {
+    --bg-color: #121212;
+    --form-bg: #1e1e1e;
+    --text-color: #e0e0e0;
+    --input-bg: #2a2a2a;
+    --input-border: #444;
+    --button-bg: #007bff;
+    --button-hover: #0056b3;
+    --small-text: #aaaaaa;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(../assets/images/Background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+
+.form-container {
+    background: var(--form-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+input[type="text"],
+input[type="date"],
+input[type="password"],
+input[type="file"],
+select {
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 5px;
+    border: 1px solid var(--input-border);
+    background-color: var(--input-bg);
+    color: var(--text-color);
+}
+
+input::placeholder {
+    color: #999;
+}
+
+select option {
+    background-color: var(--form-bg);
+    color: var(--text-color);
+}
+
+small {
+    display: block;
+    margin-top: 0.3rem;
+    font-size: 0.8rem;
+    color: var(--small-text);
+}
+
+button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--button-bg);
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
+.feedback {
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+    display: block;
+    font-weight: 500;
+}
+
+.feedback.error {
+    color: #ff4d4d;
+}
+
+.feedback.success {
+    color: #00cc66;
+}
+
+input.invalid {
+    border-color: #ff4d4d;
+}
+
+input.valid {
+    border-color: #00cc66;
+}
+
